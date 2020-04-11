@@ -84,7 +84,7 @@ int addSmVal(int a, int b, int c){
       c1++;
       if(s == a){c2++;}
 	}
-   if(c1 == c2){booleen = 1;} else{booleen = 0;}
+   if(c1 == c2){booleen = 1;}
    return booleen;  
 }
 
