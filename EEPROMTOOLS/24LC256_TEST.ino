@@ -24,10 +24,10 @@ void setup() {
   Wire.setClock(400000); //https://www.arduino.cc/en/Reference/WireSetClock
 
   //ECRITURE POUR TESTS 
-  writeEEPROM(rom, 0, 1 ); 
+  writeEEPROM(rom, 0, 10 ); 
   writeEEPROM(rom, 1, 7 ); 
   writeEEPROM(rom, 2, 4 );
-  writeEEPROM(rom, 3, 3 );
+  writeEEPROM(rom, 3, 59 );
   writeEEPROM(rom, 4, 12 );
 
 }
@@ -82,6 +82,13 @@ void loop() {
    // TROUVER DES ADRESSES AVEC LA MEME VALEUR
    //int *p = seqMmVal(12, 0, 4);   //FONCTIONNE !!! 
    //Serial.println(p[0]); 
-    
+
+   //créer un tableau 1D
+  //int *t = arrVal(0,2); //FONCTIONNE !!!
+
+     // création d'une matrice 2D
+   int **t = matrix2D(0,4,5); //FONCTIONNE !!!
+   Serial.println(t[0][1]); 
+  
 
 }
