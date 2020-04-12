@@ -1,5 +1,5 @@
 /**********************************************************************************************
- * Arduino EEPROM 24LC256 TOOLS - Version 1.1
+ * Arduino EEPROM 24LC256 TOOLS - Version 1.2
  * by ikobootloader
  *
  * License to define..
@@ -22,6 +22,18 @@
 #define rom 0x50    //Address of 24LC256 eeprom chip
 
 ///////////////////     ARRAY     /////////////////////
+
+// CREATE AN ARRAY 1D
+// arrVal(address to start, address to end)
+int arrVal(int a, int b){
+  int *t =  malloc(b - a);
+  int ct, v = 0;
+  for(short int i = a; i <= b; i++){
+    v = readEEPROM(rom, i), DEC;
+    t[ct++] = v;
+  }
+  return t;
+}
 
 // ARRAY SIZE
 #define SIZE_ARR(arr) (sizeof((arr))/sizeof(((arr)[0])))
@@ -72,10 +84,32 @@ void rev(int t[], int x){
   for (int i = 0; i < x; i++) t[i] = y[i];
 }
 
+///////////////////     MATRIX     /////////////////////
+
+// CREATE A MATRIX 2D
+// int tab[n][n]
+// matrix2D(address to start, address to end, size of array)
+int matrix2D(int a, int b, int c){
+    int n = 2;
+    int m = c;
+    int **t;
+    t = malloc(sizeof(int*)*n);
+    for(int i=0;i<n;i++){
+      t[i] = malloc(sizeof(int)*m);
+    }  
+    int ct1, ct2, v = 0;
+    for(short int j = a; j <= b ;j++){
+      v = readEEPROM(rom, j), DEC;
+      t[0][ct1++] = j;
+      t[1][ct2++] = v;
+    }   
+    return t;
+}
+
 ///////////////////     SEARCHING DATAS     /////////////////////
 
 // KNOW IF SAME VALUE IS STRICTLY PRESENT IN X ADDRESSES
-// addSmVal(value to find, address to start, adress to end)
+// addSmVal(value to find, address to start, address to end)
 // return 0 or 1
 int addSmVal(int a, int b, int c){
   int c1, c2, s, booleen = 0;
@@ -89,7 +123,7 @@ int addSmVal(int a, int b, int c){
 }
 
 // COUNT OCCURRENCES
-// occ(value to find, address to start, adress to end)
+// occ(value to find, address to start, address to end)
 int occ(int a, int b, int c){
   int s, c1 = 0;
   for(short int i = b; i <= c ;i++){
@@ -101,7 +135,7 @@ int occ(int a, int b, int c){
 
 // FIND AN ADDRESS BY A VALUE
 // but several addresses may have the same value. It brings the last one.
-// AddVal(value to find, address to start, adress to end)
+// AddVal(value to find, address to start, address to end)
 int AddVal(int a, int b, int c){
   int s, r = 0;
   for(short int i = b; i <= c ;i++){
@@ -113,7 +147,7 @@ int AddVal(int a, int b, int c){
 
 // FIND ADRESSES WITH THE SAME VALUE
 // function create an array
-// seqMmVal(value to find, address to start, adress to end)
+// seqMmVal(value to find, address to start, address to end)
 int *seqMmVal(int a, int b, int c){
   int s, c1, c2 = 0; 
   for(short int i = b; i <= c ;i++){
