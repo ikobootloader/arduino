@@ -20,6 +20,7 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 #define DHTTYPE DHT22      // DHT 22  (AM2302)
 
 int v = 0;
+unsigned int compte = 0;
 int search = 0;
 int result = 0;
 //const short int index[] = { 0, 32000};
@@ -48,7 +49,7 @@ void loop() {
    //RESET COMPTE A REBOURS
    if(v==10){v=0;}
    //ENREGISTREMENT TOUS LES 36000/2
-   v = v+1;
+   v++;
 
    //Serial.print(v);
   
@@ -119,14 +120,10 @@ void loop() {
      //
    if(v==5){
       Serial.println("Enregistrement!");
-      for(int i = 0;i<=32000;i++){ //32700
-        search = readEEPROM(rom, i), DEC; 
-        if(search!=255){
-            result = i+1;
-        }
-      }
+      writeEEPROM(rom, compte, hum);  //
+      compte++;
       //Serial.println(result);
-      writeEEPROM(rom, result, hum);  //
+
    }
 
 }
