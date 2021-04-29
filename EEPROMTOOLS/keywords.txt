@@ -4,5 +4,6 @@ Memoire		KEYWORD3
 lire		KEYWORD3
 effacer		KEYWORD3
 ecrire		KEYWORD3
-
+setupWire	KEYWORD3
+serial		KEYWORD3
 

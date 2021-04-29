@@ -5,7 +5,7 @@
 
 /* 
 * 
-* OUTILS POUR LE CONTROLE DES MOTEURS RELIES AU L298N
+* OUTILS POUR LE CONTROLE DE L'EEPROM 24LC256
 * 
 */
 
@@ -15,9 +15,13 @@ class MEMOIRE{
 
 	MEMOIRE();
 	~MEMOIRE();
-	void effacer(int x, int y);
-	void ecrire(int adresseAppareil, unsigned int adresseEeprom, byte donnee);
-	byte lire(int adresseAppareil, unsigned int adresseEeprom);
+	void setupWire();
+	static int increment;
+	void ecrire(int, unsigned char);
+	void ecrire(unsigned char);
+	unsigned char lire(int);
+	int serial(int, int);
+	void effacer(int, int);	
         
 };
 
