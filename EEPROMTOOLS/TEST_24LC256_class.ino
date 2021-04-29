@@ -1,4 +1,3 @@
-//#include <Wire.h>     //I2C library
 #include <Memoire.h>
 
 //SIMPLIFICATION DE L'UTILISATION DU PORT SERIE
@@ -41,7 +40,5 @@ void loop() {
   
   //ADRESSAGE AUTOMATIQUE DE LA DONNEE
   //memo.ecrire(0);
-  
-  delay(3000);
 
 }
