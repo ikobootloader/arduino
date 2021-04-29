@@ -1,0 +1,8 @@
+MEMOIRE		KEYWORD1
+
+Memoire		KEYWORD3
+lire		KEYWORD3
+effacer		KEYWORD3
+ecrire		KEYWORD3
+
+
