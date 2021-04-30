@@ -38,7 +38,7 @@ bool SERVOMOTEUR::etat = false;
 
 unsigned char SERVOMOTEUR::oscillateur(int delai)
 {
-  if(etat == false && amplitude <= 5)
+  if(etat == false)
   {//5 positions => Se référer à la matrice d'angles
     amplitude++;
     if(amplitude == 5){
