@@ -19,7 +19,8 @@
 // GND >> GND
 //////////////////
 
-//0x50 => adresse de la puce 24LC256
+//0x50 || 0x58 => adresse de la puce 24LC256
+//80   || 88
 
 int MEMOIRE::increment = 0;
 
@@ -28,7 +29,7 @@ MEMOIRE::MEMOIRE(){}
 void MEMOIRE::setupWire(){
   // INITIALISATION I2C
   Wire.begin();
-  Wire.setClock(400000); //https://www.arduino.cc/en/Reference/WireSetClock
+  Wire.setClock(400000); //https://www.arduino.cc/en/Reference/WireSetClock >> Fréquence supportée par la puce
 }
 
 // ECRIRE
@@ -36,9 +37,9 @@ void MEMOIRE::ecrire(int adresseEeprom, unsigned char donnee)
 {
 	//éviter les réécritures inutiles !
 	if(lire(adresseEeprom) != donnee){
-		  Wire.beginTransmission(0x50);
-		  Wire.write((int)(adresseEeprom >> 8));   // MSB
-		  Wire.write((int)(adresseEeprom & 0xFF)); // LSB
+		  Wire.beginTransmission(0x50); // Adresse du périphérique (https://zestedesavoir.com/billets/1824/scanner-i2c-pour-arduino/)
+		  Wire.write((int)(adresseEeprom >> 8));   // MSB => Décalage sur 8 bits ?
+		  Wire.write((int)(adresseEeprom & 0xFF)); // LSB => Ecriture sur 1 octet ?
 		  Wire.write(donnee);
 		  Wire.endTransmission(); 
 		  delay(5);
@@ -57,15 +58,15 @@ void MEMOIRE::ecrire(unsigned char donnee)
 // LIRE UNE ADRESSE
 unsigned char MEMOIRE::lire(int adresseEeprom) 
 {
-  byte retourneDonnee = 0xFF;
-  Wire.beginTransmission(0x50);
-  Wire.write((int)(adresseEeprom >> 8));   // MSB
-  Wire.write((int)(adresseEeprom & 0xFF)); // LSB
+  byte retourneDonnee = 0xFF; // Par défaut retourneDonnee est à 255
+  Wire.beginTransmission(0x50);	// Adresse du périphérique (https://zestedesavoir.com/billets/1824/scanner-i2c-pour-arduino/)
+  Wire.write((int)(adresseEeprom >> 8));   // MSB => Décalage sur 8 bits ?
+  Wire.write((int)(adresseEeprom & 0xFF)); // LSB => Lecture sur 1 octet ?
   Wire.endTransmission();
  
-  Wire.requestFrom(0x50,1);
+  Wire.requestFrom(0x50,1); // Reception d'un octet
  
-  if (Wire.available()) retourneDonnee = Wire.read();
+  if (Wire.available()) retourneDonnee = Wire.read(); // lecture si disponible
  
   return retourneDonnee;
 }
