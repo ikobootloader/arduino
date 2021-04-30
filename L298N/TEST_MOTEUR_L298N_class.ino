@@ -12,8 +12,6 @@
 //Class             Objet
 VOITURE_CONTROLES   VOITURE;
 
-int var = 5;
-
 void setup() {
 
   //Paramétrage par défaut
