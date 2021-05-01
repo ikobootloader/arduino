@@ -13,19 +13,19 @@
 
   <H3>//Créer une fréquence</H3>
   /*
-  // f.frequence(limite de temps à insérer en millisecondes)
-  f.frequence(1000); //la fonction renvoie true toute les secondes
+  // f.frequence(limite de temps à insérer en millisecondes)<br>
+  f.frequence(1000); //la fonction renvoie true toute les secondes<br>
   */
 
   /***/
 
   <H3>//Créer un intervalle de temps à partir de la fonction f.frequence()</H3>
   /*
-  bool val  = f.frequence(1000);
-  f.intervalle(val,10);
-  f.resetIntervalle() permet de réinitialiser à 0 la méthode f.compteurIntervalle 
-  Le résultat est tjs retourné dans la méthode f.compteurIntervalle 
-  i(f.compteurIntervalle) 
+  bool val  = f.frequence(1000);<br>
+  f.intervalle(val,10);<br>
+  f.resetIntervalle() permet de réinitialiser à 0 la méthode f.compteurIntervalle <br>
+  Le résultat est tjs retourné dans la méthode f.compteurIntervalle <br>
+  i(f.compteurIntervalle) <br>
   */
 
   <H2>//////// FONCTIONS SUR TABLEAUX ////////</H2>
@@ -34,9 +34,9 @@
   
   //Retourner la valeur la plus courante
   /*
-  f.plusFrequent(nom du tableau, taille du tableau);
-  int tab[10] = {0,1,2,4,4,9,6,8,3,7};
-  f.plusFrequent(tab,SIZE_ARR(tab)) <=> f.plusFrequent(tab,10);
+  f.plusFrequent(nom du tableau, taille du tableau);<br>
+  int tab[10] = {0,1,2,4,4,9,6,8,3,7};<br>
+  f.plusFrequent(tab,SIZE_ARR(tab)) <=> f.plusFrequent(tab,10);<br>
   */
 
   /***/
