@@ -3,6 +3,8 @@
 <h3>Arduino tools</h3>
 
 <p>EEPROM > Fonctions pour l'utilisation de la puce 24LC256
+  
+FONCTIONS > Bibliothèque de fonctions sur variables, temps et tableaux
 
 L298N > Pilotage de 2 moteurs CC
 
