@@ -29,7 +29,7 @@ void loop() {
   //Créer une fréquence
   /*
   // f.frequence(limite de temps à insérer en millisecondes)
-  f.frequence(1000); //la fonction renvoie true toute les secondes
+  f.frequence(1000); //la fonction renvoie true toutes les secondes
   */
 
   /***/
@@ -45,7 +45,7 @@ void loop() {
 
   //////// FONCTIONS SUR TABLEAUX ////////
 
-  //Retounrner la taille d'un tableau => SIZE_ARR(tableau);
+  //Retourner la taille d'un tableau => SIZE_ARR(tableau);
   
   //Retourner la valeur la plus courante
   /*
