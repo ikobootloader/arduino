@@ -6,4 +6,4 @@
 
 L298N > Pilotage de 2 moteurs CC
 
-SG90 > Oscillateur pour balayage automatique</p>
+SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
