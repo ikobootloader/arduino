@@ -10,4 +10,4 @@
  * Si l'action permet au véhicule d'éviter l'obstacle, elle conserve son score à 1
  * Si l'action ne permet pas au véhicule d'éviter l'obstacle,
  * d'autres actions sont testées. C'est l'action qui permet au véhicule
- * d'éviter l'obtacle qui obtient un score à un 1. Toutes les autres actions ont un score de 0
+ * d'éviter l'obtacle qui obtient un score à un 1. Toutes les autres actions affichent un score de 0
