@@ -4,7 +4,7 @@
 
 <p>EEPROM > Fonctions pour l'utilisation de la puce 24LC256
   
-FONCTIONS > Bibliothèque de fonctions sur variables, temps et tableaux
+FONCTIONS > Bibliothèque de fonctions pour variables, gestion du temps et tableaux
 
 L298N > Pilotage de 2 moteurs CC
 
