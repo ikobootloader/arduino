@@ -3,10 +3,10 @@
   <H2>//////// FONCTIONS SUR VARIABLES ////////</H2>
   
   <H3>//Concaténation de 2 valeurs</H3>
-  /*
-  int c1= 5;
-  int c2 = 99; 
-  int c3 = f.concatenation(c1,c2); //Retourne 599
+  /*<br>
+  int c1= 5;<br>
+  int c2 = 99; <br>
+  int c3 = f.concatenation(c1,c2); //Retourne 599<br>
   */
 
   <H2>//////// FONCTIONS SUR LE TEMPS ////////</H2>
