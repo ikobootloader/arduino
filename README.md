@@ -12,4 +12,4 @@ SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 
 <H3>///// VOITURE AUTONOME /////</H3>
 
-<h2>Mod SCORE</h2>
+<h4>Mod SCORE</h4>
