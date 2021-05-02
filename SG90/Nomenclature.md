@@ -16,7 +16,7 @@ SERVOMOTEUR   servo;<br>
   //servo.balayage(amplitude); //ou// servo.balayage(servo.amplitude);<br>
 <br>
   //Initialisation des angles par l'utilisateur (Toujours 5 entrées!)<br>
-  //sinon lecteur des angles par défaut : 5,45,90,135,175<br>
+  //sinon lecture des angles par défaut : 5,45,90,135,175<br>
   //servo.angles(0,100,120,140,170);<br>
 <br>
   //TEST<br>
