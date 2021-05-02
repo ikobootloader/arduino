@@ -1,7 +1,7 @@
 <h1>Nomenlature EERPOM</h1>
 <br>
 
-<b>//Class   Objet</b><br>
+<b>//Class    Objet</b><br>
 <span style="color:orange;">MEMOIRE</span>   memo;<br>
 <br><br>
   <b>//RESET</b><br>
@@ -20,7 +20,7 @@
   <b>//AFFICHER SUR LE PORT SERIE</b><br>
   memo.serial(0,5);<br>
     <br>
-  <b>//Définir pointeurs sur une adresse de départ et une adresse d'arrivée</b><br>
+  <b>//DEFINIR UN POINTEUR D'ENTREE ET UN POINTEUR DE SORTIE EN FONCTION D'UN INTERVALLE</b><br>
   memo.adresseEepromMin = 0;<br>
   memo.adresseEepromMax = 0;<br>
   memo.pointer(30);<br>
