@@ -2,7 +2,7 @@
 <br>
 
 <b>//Class   Objet</b><br>
-<span style="color:orange;"><MEMOIRE</span>   memo;<br>
+<span style="color:orange;">MEMOIRE</span>   memo;<br>
 <br><br>
   <b>//RESET</b><br>
   //memo.effacer(adresse de départ,adresse d'arrivée);<br>
