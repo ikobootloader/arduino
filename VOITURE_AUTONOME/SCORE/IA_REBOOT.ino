@@ -49,6 +49,9 @@ SERVOMOTEUR   servo;
 #define iSet     Serial.begin(9600);
 #define i(texte) Serial.println(texte);
 /***************************************************/
+//Balayage de sécurité
+bool scanner = 0;
+unsigned char attente = 0;
 
 void setup() {
   //Port Série (uniquement pour les tests)
@@ -70,8 +73,17 @@ void loop() {
   //Obstacle
   while(ultrason.measureDistanceCm() >= 0 && ultrason.measureDistanceCm() <= maxDistance){ 
     score(amplitude);
+    scanner = 1;
+    attente = 0;
   }
   //Par défaut,la voiture avance
-  AVANCER;
+  //SECURITE:
+  //Si obstacle : scanner l'environnement avant de reprendre la route
+  if(scanner == 1){attente++;}
+  if(attente == 10 || scanner == 0){
+    attente = 0;
+    scanner = 0;
+    AVANCER;  
+  }
 
 }
