@@ -87,4 +87,22 @@ void MEMOIRE::effacer(int x, int y){
   }
 }
 
+//Définir pointeurs sur une adresse de début et une adresse de fin
+//selon intervalle définit par l'utilisateur
+static unsigned int MEMOIRE::adresseEepromMin = 0;
+static unsigned int MEMOIRE::adresseEepromMax = 0;
+static unsigned int MEMOIRE::qteAdresses = 0;
+void MEMOIRE::pointer(const unsigned int qteATraiter)
+{
+  MEMOIRE::adresseEepromMin = MEMOIRE::increment - qteATraiter;
+  MEMOIRE::adresseEepromMax = MEMOIRE::adresseEepromMin + qteATraiter;
+  
+  if(MEMOIRE::increment <= qteATraiter){
+    MEMOIRE::adresseEepromMin = 0;
+    MEMOIRE::adresseEepromMax = MEMOIRE::increment;
+  }
+  
+  MEMOIRE::qteAdresses = MEMOIRE::adresseEepromMax - MEMOIRE::adresseEepromMin;
+}
+
 MEMOIRE::~MEMOIRE(){}

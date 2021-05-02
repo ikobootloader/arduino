@@ -7,4 +7,7 @@ ecrire		KEYWORD3
 setupWire	KEYWORD3
 serial		KEYWORD3
 increment	KEYWORD3
-
+adresseEepromMin	KEYWORD3
+adresseEepromMax	KEYWORD3
+pointer		KEYWORD3
+qteAdresses	KEYWORD3

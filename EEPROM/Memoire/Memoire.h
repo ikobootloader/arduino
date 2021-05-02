@@ -22,6 +22,11 @@ class MEMOIRE{
 	unsigned char lire(int);
 	int serial(int, int);
 	void effacer(int, int);	
+	//Pointer sur intervalle d'adresses
+	static unsigned int adresseEepromMin;
+	static unsigned int adresseEepromMax;
+	static unsigned int qteAdresses;
+	void pointer(const unsigned int);
         
 };
 
