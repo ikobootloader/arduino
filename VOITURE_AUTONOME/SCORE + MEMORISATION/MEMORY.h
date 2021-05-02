@@ -48,8 +48,7 @@ void memoInstantT(unsigned char actJ, unsigned char posSVM){
 }
 
 //RECUPERER LES ACTIONS QUI FONCTIONNENT LE MIEUX SUR LES 30 DERNIERES VALEURS
-//Quantité de données à traiter pour récupérer les valeurs de la fonction occurencesJAUGE()
-//const unsigned char qteDonneesAtraiter = 30;//plus c'est élevé, plus c'est précis
+//Quantité de données à traiter pour récupérer les valeurs de la fonction occurrencesSCORE()
 int *cas0 = NULL;
 //bool stopMalloc = 0;
 
@@ -97,16 +96,6 @@ int occurrencesSCORE(int angleEnJauge){
     return NULL;
   }
 
-}
-
-void listerDonnees(){//lister les données de l'eeprom
-  unsigned char lecture = 0;
-  Serial.println(F("________________________"));
-  for(int test = 0;test <= 30; test++){
-    lecture = memo.lire(test);
-    Serial.println(lecture);
-  }  
-  Serial.println(F("________________________"));
 }
 
 #endif   

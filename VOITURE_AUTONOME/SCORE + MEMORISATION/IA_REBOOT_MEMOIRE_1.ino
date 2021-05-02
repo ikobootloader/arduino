@@ -80,12 +80,11 @@ void setup() {
   VOITURE.setupPins();
   //Paramétrage par défaut des moteurs
   servo.setupServo();
-  //Petit délai avant le go
   //Setup de Wire
   memo.setupWire();
   //RESET
   memo.effacer(0,200);
-  
+  //Petit délai avant le go  
   delay(2000);
 }
 

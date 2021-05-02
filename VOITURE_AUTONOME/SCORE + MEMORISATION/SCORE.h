@@ -47,7 +47,7 @@ void souvenirScore(int pstnSVM){
    souvenirAction = occurrencesSCORE(pstnSVM);
    //VERIFICATION EEPROM
    //l'action la plus fréquente pour un type de position est présumée être la meilleure ! 
-   //changer les valeurs dans varJAUGE en conséquence
+   //changer les valeurs dans matriceSCORE en conséquence
     if(souvenirAction != 0){
       for(int chercheP = 0; chercheP <= 3; chercheP++){
         if(matriceSCORE[pstnSVM][chercheP][0] == souvenirAction){
@@ -63,8 +63,8 @@ void souvenirScore(int pstnSVM){
 int actPrinc = 0;
 void score(int positionSM){
 
-   // mémorisation action 1 AVANCER + quantité de secondes a l'instant où détection d'obstacle
-   if(stopMemo != 1){memoInstantTAvancer();} 
+  // mémorisation action AVANCER + quantité de secondes a l'instant où détection d'obstacle
+  if(stopMemo != 1){memoInstantTAvancer();} 
   
   // VARIABLES DE JAUGE
   actPrinc = 0;  
