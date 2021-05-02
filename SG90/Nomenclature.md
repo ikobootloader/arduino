@@ -13,7 +13,7 @@ SERVOMOTEUR   servo;<br>
   //sinon lecture des angles par défaut : 5,45,90,135,175<br>
   //servo.angles(0,100,120,140,170);<br>
   <br>
-  //Initialiser l'oscillateur en déinissant une vitesse (obligatoire!)<br>
+  //Initialiser l'oscillateur en déinissant un délai (obligatoire!)<br>
   //servo.oscillateur(500);<br>
   <br>
   //Activer le balayage du servomoteur <br>
