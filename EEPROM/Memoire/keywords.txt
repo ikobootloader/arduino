@@ -6,4 +6,5 @@ effacer		KEYWORD3
 ecrire		KEYWORD3
 setupWire	KEYWORD3
 serial		KEYWORD3
+increment	KEYWORD3
 
