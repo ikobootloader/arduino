@@ -20,13 +20,13 @@ VOITURE_CONTROLES   VOITURE;<br>
   #define GAUCHE VOITURE.locomotion(GAUCHE,255)<br>
   #define DROITE VOITURE.locomotion(DROITE,255)<br>
   #define ARRET VOITURE.locomotion(ARRET,0)<br>
-
+<br>
   <b>//Paramétrage par défaut</b><br>
   VOITURE.setupPins();<br>
-  
+  <br>
   <b>//Paramétrage manuel:</b> VOITURE.setupPins(enAPin,in1Pin,in2Pin,in3Pin,in4Pin,enBPin)<br>
   Exemple: VOITURE.setupPins(6,7,5,4,2,3);<br>
-  
+  <br>
   <b>//Paramétrage par nombre ou mot</b><br>
   //0 ou AVANT | 1 ou ARRIERE | 2 ou GAUCHE | 3 ou DROITE | 4 ou ARRET<br>
   //Exemple: VOITURE.locomotion(0,255) <=> VOITURE.locomotion(AVANCER,255)<br>
