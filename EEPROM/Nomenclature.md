@@ -17,7 +17,7 @@
   <b>//LIRE UNE ADRESSE</b><br>
   //memo.lire(0);<br>
 <br>
-  <b>//AFFICHER SUR LE PORT SERIE</b><br>
+  <b>//AFFICHER LES DONNEES LE PORT SERIE</b><br>
   memo.serial(0,5);<br>
     <br>
   <b>//DEFINIR UN POINTEUR D'ENTREE ET UN POINTEUR DE SORTIE EN FONCTION D'UN INTERVALLE</b><br>
