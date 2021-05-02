@@ -113,7 +113,7 @@ void loop() {
   //Par défaut,la voiture avance
   //SECURITE:
   //Si obstacle : scanner l'environnement avant de reprendre la route
-  if(scanner == 1){attente++;}
+  if(scanner == 1){attente++;f.compteurIntervalle = 0;}
   if(attente == 10 || scanner == 0){
     attente = 0;
     scanner = 0;
