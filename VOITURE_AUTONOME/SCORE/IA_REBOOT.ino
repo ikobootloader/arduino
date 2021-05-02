@@ -1,5 +1,5 @@
 /****************************************************
- * VOITURE AUTONOME - Version 1
+ * VOITURE AUTONOME - Version 1.1
  * 
  * ::PRINCIPE::
  * Il y a 4 réactions différentes possibles face à un obstacle :
