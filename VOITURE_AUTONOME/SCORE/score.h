@@ -56,10 +56,10 @@ void score(int positionSM){
             actionTrouvee(matriceSCORE[positionSM][chkJ][0]);//action!          
             //i(actPrinc)
             ARRET,delay(500);//ARRET ROUES 
-            if(ultrason.measureDistanceCm() > maxDistance){ //si distance sup ou égal à limite fixée        
+            if(ultrason.measureDistanceCm() > maxDistance){ //si distance sup à la limite fixée        
               matriceSCORE[positionSM][chkJ][1] = 1; //i("ACTION PRINCIPALE A FONCTIONNE")              
               reaction = true;
-            } else{ //si distance sup ou égal à limite fixée         
+            } else{ //si distance inf à la limite fixée         
               matriceSCORE[positionSM][chkJ][1] = 0;//-1 action antérieur //i("ACTION PRINCIPALE N'A PAS FONCTIONNE")
               reaction = false;
               if(seq == 1){
