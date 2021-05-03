@@ -32,6 +32,8 @@ class FONCTIONS{
     // FONCTIONS SUR TABLEAUX
 	int plusFrequent(int*, size_t);
 	/***/
+	int plusFrequentExclusion(int*, size_t, int);
+	/***/
 	int mini(int *,size_t);
 	/***/
 	int maxi(int *,size_t);

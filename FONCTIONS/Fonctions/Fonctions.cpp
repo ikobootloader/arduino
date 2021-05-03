@@ -108,6 +108,38 @@ int FONCTIONS::plusFrequent(int vet[], size_t dim)
 
 /***/
 
+int FONCTIONS::plusFrequentExclusion(int vet[], size_t dim, int nombre)
+{//Recupérer la valeur la plus courante dans un tableau
+
+/*
+*https://stackoverflow.com/questions/42263061/how-to-find-the-most-repeated-value-in-a-array
+*https://stackoverflow.com/help/licensing
+*/
+
+    size_t i, j, count;
+    size_t most = 0;
+    int temp, elem;
+
+    for(i = 0; i < dim; i++) {
+		if(vet[i] != nombre){		
+			temp = vet[i];
+			count = 1;
+			for(j = i + 1; j < dim; j++) {
+				if(vet[j] == temp) {
+					count++;
+				}
+			}
+			if (most < count) {
+				most = count;
+				elem = vet[i];
+			}		
+		}		
+    }
+    return elem;
+}
+
+/***/
+
 //Trouver la valeur la plus petite
 // mini(tableau,taille du tableau)
 int FONCTIONS::mini(int *t,size_t n){

@@ -11,3 +11,4 @@ maxi	KEYWORD3
 triAsc	KEYWORD3
 triDesc	KEYWORD3
 inverser	KEYWORD3
+plusFrequentExclusion	KEYWORD3
