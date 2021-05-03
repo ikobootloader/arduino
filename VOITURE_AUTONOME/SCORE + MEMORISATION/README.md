@@ -1,1 +1,1 @@
-BUG : fuite de mémoire à cause d'une malloc ! 
+BUG : fuite de mémoire (probablement!) à cause d'une malloc ! 
