@@ -49,8 +49,15 @@ void memoInstantT(unsigned char actJ, unsigned char posSVM){
 
 //RECUPERER LES ACTIONS QUI FONCTIONNENT LE MIEUX SUR LES 30 DERNIERES VALEURS
 //Quantité de données à traiter pour récupérer les valeurs de la fonction occurrencesSCORE()
-int *cas0 = NULL;
+//Malloc et realloc pour l'allocation du tableau cas0 font crasher le microcontrôleur !
+//int *cas0 = NULL;
 //bool stopMalloc = 0;
+int cas0[30] = {0xFF,0xFF,0xFF,0xFF,0xFF,
+               0xFF,0xFF,0xFF,0xFF,0xFF,
+               0xFF,0xFF,0xFF,0xFF,0xFF,
+               0xFF,0xFF,0xFF,0xFF,0xFF,
+               0xFF,0xFF,0xFF,0xFF,0xFF,
+               0xFF,0xFF,0xFF,0xFF,0xFF};
 
 int occurrencesSCORE(int angleEnJauge){
 
@@ -61,11 +68,7 @@ int occurrencesSCORE(int angleEnJauge){
 
   int lireDonnees = 0;
   int operationSplit = 0;
-  int cas0compte = 0;
-
-  //Gestion de l'allocation dynamique
-  cas0 = malloc(sizeof(unsigned char) * memo.qteAdresses);
-  if(cas0 == NULL){i("malloc n'a pas fonctionné!")}       
+  int cas0compte = 0;      
 
   for(int lecture1 = memo.adresseEepromMin;lecture1 < memo.adresseEepromMax; lecture1++){ //compter le nombre d'occurrences pour chaque action   
     lireDonnees = memo.lire(lecture1);
@@ -85,12 +88,10 @@ int occurrencesSCORE(int angleEnJauge){
   int actionplusfrequente0 = 0;
 
   if(cas0compte != 0){
-    valeurFrequenteCas0 = f.plusFrequent(cas0,cas0compte);
+    valeurFrequenteCas0 = f.plusFrequentExclusion(cas0,cas0compte,255);
+    i(valeurFrequenteCas0)
     actionplusfrequente0 = valeurFrequenteCas0 / 10;
 
-    //Libérer l'espace mémoire : 
-    if(cas0 != NULL){free(cas0);}
-    
     return actionplusfrequente0;
   }else{
     return NULL;
