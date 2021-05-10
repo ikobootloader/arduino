@@ -11,7 +11,7 @@
 
   <H2>//////// FONCTIONS SUR LE TEMPS ////////</H2>
 
-  <H3>//Créer une fréquence</H3>
+  <H3>//Créer une fréquence / minuterie</H3>
   /*<br>
   // f.frequence(limite de temps à insérer en millisecondes)<br>
   f.frequence(1000); //la fonction renvoie true toutes les secondes<br>
