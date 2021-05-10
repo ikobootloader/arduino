@@ -12,7 +12,7 @@ SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 
 <H3>///// VOITURE AUTONOME /////</H3>
 
-<p><b>Projet de mini intelligence artificielle pour Arduino UNO</b></p>
+<p><b>Projet de voiture autonome / adaptative pour Arduino UNO</b></p>
 
 <p>Ce projet est développé à l'aide des outils ci-dessus.</p>
 
