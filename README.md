@@ -15,16 +15,14 @@ SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 <p><b>Projet de voiture autonome / adaptative pour Arduino UNO</b></p>
 
 <p>Ce projet est développé à l'aide des outils ci-dessus.</p>
-
+<p>Mon objectif est de créer une petite intelligence artificielle simple mais efficace sufffisament légère pour être supportée par l'ATmega328P</p>
 <h4>Mod SCORE</h4>
 <h4>Mod SCORE + MEMORISATION</h4>
 <h4>Mod SCORE + MEMORISATION + PARCOURS</h4>
-
-
-
-
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 >> Développés avec l'IDE 1.8.8 à partir de avril/mai 2021 par Frédérick MURAT - Licence GPLv3
