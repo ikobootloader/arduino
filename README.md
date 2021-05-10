@@ -10,7 +10,7 @@ L298N > Pilotage de 2 moteurs CC
 
 SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 
-<H3>///// VOITURE AUTONOME /////</H3>
+<H3>** VOITURE AUTONOME **</H3>
 
 <p><b>Projet de voiture autonome / adaptative pour Arduino UNO</b></p>
 
