@@ -21,8 +21,4 @@ SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 <h4>Mod SCORE + MEMORISATION + PARCOURS</h4>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
 >> Développés avec l'IDE 1.8.8 à partir de avril/mai 2021 par Frédérick MURAT - Licence GPLv3
