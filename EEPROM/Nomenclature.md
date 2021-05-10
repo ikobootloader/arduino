@@ -11,7 +11,7 @@
   //memo.ecrire(adresse,donnée);<br>
   <br>
   <b>//ADRESSAGE AUTOMATIQUE DE LA DONNEE</b><br>
-  //memo.increment (varibale d'incrémentation)<br>
+  //memo.increment (variable d'incrémentation)<br>
   //memo.ecrire(0);  <br>
 <br>
   <b>//LIRE UNE ADRESSE</b><br>
