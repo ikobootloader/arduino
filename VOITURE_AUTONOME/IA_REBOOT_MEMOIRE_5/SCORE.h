@@ -174,7 +174,7 @@ void score(int positionSM){
       }
     }    
     
-    //ATTENTION : SI AUCUNE SOLUTION TROUVEE TOUTES LES VALEURS SONT A 0 DANS matriceSCORE !!!
+    //SI AUCUNE SOLUTION TROUVEE
     if(reaction == false){//A L ISSU DES TESTS PRECEDENTS
       //i("RIEN A FONCTIONNE")
       //Cheat Code!! => reflexe !
