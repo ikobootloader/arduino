@@ -5,14 +5,14 @@
  * ::SCORE::
  * Il y a 4 réactions différentes possibles face à un obstacle :
  * AVANCER || RECULER || GAUCHE || DROITE
- * Par défaut, pour chaque angle (amplitude) balayé par le servomoteur 
- * c'est l'action AVANCER qui possède le meilleur score (3).
+ * Par défaut, pour chaque angle (amplitude) balayé par le servomoteur, 
+ * le score est à 0.
  * Lorsque la voiture s'approche d'un obstacle, elle teste l'action
  * qui possède le meilleur score selon l'angle en cours de balayage
- * Si l'action permet au véhicule d'éviter l'obstacle, elle conserve son score à 3
+ * Si l'action permet au véhicule d'éviter l'obstacle, elle gagne ou conserve un score à 3
  * Si l'action ne permet pas au véhicule d'éviter l'obstacle,
  * d'autres actions sont testées. C'est l'action qui permet au véhicule
- * d'éviter l'obtacle qui obtient un score égal un 3. Les autres scores sont diminués de 1.
+ * d'éviter l'obtacle qui obtient un score égal à 3. Les autres scores sont diminués de 1.
  * le score le plus bas est zéro.
  * 
  * ::MEMORISATION::
@@ -29,7 +29,7 @@
  * peut détecter si une séquence d'actions est en train de se répéter. 
  * La détection s'effectue sur 3 actions.
  * Dans ce cas, la voiture réexécute toutes les actions qui s'ensuivent 
- * dans une limite de 7 actions pour ce programme.
+ * dans une limite de 7 actions (pour ce programme).
  * Et cela indéfiniment sauf si un obstacle apparaît.
  * 
  * ::AUTONOMIE::
