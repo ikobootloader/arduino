@@ -1,4 +1,5 @@
 
+<b>Le projet présenté ici n'est pas achevé.</b><br/>
 
 La fonction de recomposition de matriceSCORE "void recompositionMatrice(int pSVM, int boucle)" est trop complexe ! Il faut la simplifier !!!<br/>
 Le système de parcours comporte un ou plusieurs dysfonctionnements<br/>
