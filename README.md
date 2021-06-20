@@ -19,5 +19,6 @@ SG90 > Oscillateur pour balayage automatique d'un servomoteur</p>
 
 
 <br>
+Pour davantage de renseignements, consuter https://mercituring.wordpress.com/<br>
 <br>
 >> Développés avec l'IDE 1.8.8 à partir de avril/mai 2021 par Frédérick MURAT - Licence GPLv3
